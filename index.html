@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<Title> Pizza Creator </Title>
+<script src="modernizr.custom.65897.js"></script>
+
+</head>
+<h1>Pizza Maker </h1>
+<body>
+
+
+
+<fieldset id ="pizzaOrder">
+<legend>Order</legend>
+<form name = "form" method = "post" action = "result.html" onsubmit = "return validate()" >
+<legend>Size</legend>
+  <select id="size" name="size" value = "" >
+				  <option value =""></option>
+                  <option value="Small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                  <option value="Extra Large">Extra Large</option>
+               </select>
+
+
+<legend>Crust</legend>
+<input type = "checkbox" id = "Thin crust" name = "Crust">
+<label for = "Thin crust"> Thin</label>
+<input type = "checkbox" id = "Fluffy" name = "Crust">
+<label for = "Fluffy"> Fluffy</label>
+<input type = "checkbox" id = "Burn crust" name = "Crust">
+<label for = "Burn crust">Burn</label>
+
+<br><legend>Toppings</legend>
+<input type = "checkbox" id = "topping" name = "topping" value ="pepperoni"/> 
+<label for="pepperoni">Pepperoni</label>
+<input type = "checkBox" id = "topping" name = "topping">
+<label for = "Mushrooms">Mushrooms</label>
+<input type = "checkBox" id = "topping" name = "topping">
+<label for = "Pineapple">Pineapple</label>
+<input type = "checkBox" id = "topping" name = "topping">
+<label for = "Onions">Onions</label>
+<input type = "checkBox" id = "topping" name = "topping">
+<label for = "Black Olives">Black Olives</label>
+<legend>Payment</legend>
+
+<select id = "payment" name = "payment"  value = "">
+	<option value = ""></option>
+	<option value = "cash">Cash</option>
+	<option value = "Credit">Credit</option>
+	<option value = "PayPal">PayPal</option>
+	<span id = "Message"><value>;
+	</select>
+            <br><br><input type="submit" value="Submit Order" />
+
+</fieldset>
+</form>
+<script>
+function validate(){
+	if(document.form.size.selectedIndex == ""){
+		alert("Size need");
+		return false;
+	}
+	if(document.form.payment.selectedIndex == ""){
+		alert("Payment method required");
+		return false;
+	}
+}
+</script>
+</body>
+</html>
